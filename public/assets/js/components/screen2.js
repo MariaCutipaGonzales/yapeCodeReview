@@ -60,7 +60,7 @@ const Screen2 = (update)=>{
   });
 
   btnContinuar.click(function () {
-    if(inputPhone.val().length == 9){
+    if(inputPhone.val().length == 9 && inputPhone.val().charAt(0) == 9){
       checkUser(inputPhone.val(), true, message, update);
       message.text('');
     }
