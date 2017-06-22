@@ -4,37 +4,6 @@
   font-family: Roboto,sans-serif;
 }
 
-body{
-  margin: auto;
-  text-align: center;
-}
-
-.container{
-  width: 70%;
-  margin: 40px auto;
-}
-
-.btn-registrarme{
-  background-color: #fbd43b ;
-  color: white;
-  border: 0;
-  margin: auto;
-  padding: 10px;
-  width: 100%;
-  font-size: 28px;
-  margin-top: 20px;
-  border-radius: 5px;
-}
-
-h1,h2{
-  color: #38052a;
-}
-
-h3{
-  color:  #8f8f8f;
-  line-height: 35px;
-}
-
 .wrapper{
   display: flex;
   align-items: center;
@@ -42,6 +11,35 @@ h3{
   flex-direction: column;
   height: 100vh;
   margin: auto;
+}
+
+body{
+  margin: auto;
+  text-align: center;
+}
+
+.container{
+  width: 70%;
+  /*margin: 40px auto;*/
+}
+
+.btn-registrarme{
+  background-color: #fbd43b ;
+  color: white;
+  border: 0;
+  margin: auto;
+  padding:  8px 5px;
+  width: 100%;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+h3{
+  font-weight: bolder;
+}
+.text-screen1{
+  color:  #8f8f8f;
 }
 
 /** Screen 2**/
