@@ -1,0 +1,290 @@
+/** Screen 1 - Welcome**/
+*{
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif;
+}
+
+body{
+  margin: auto;
+  text-align: center;
+}
+
+.container{
+  width: 70%;
+  margin: 40px auto;
+}
+
+.btn-registrarme{
+  background-color: #fbd43b ;
+  color: white;
+  border: 0;
+  margin: auto;
+  padding: 10px;
+  width: 100%;
+  font-size: 28px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+h1,h2{
+  color: #38052a;
+}
+
+h3{
+  color:  #8f8f8f;
+  line-height: 35px;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: auto;
+}
+
+/** Screen 2**/
+.container-medium{
+  width: 80%;
+}
+
+.img-center{
+  width: 50%;
+}
+
+.content-input{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.img-input{
+  width: 20%;
+  margin-left: 6%;
+}
+
+input{
+  display: inline-block;
+  padding-top: 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: #49233b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-phone{
+  padding-right: 20%;
+  width: 74%;
+}
+
+.content-checkbox{
+  text-align: left;
+  font-size: 18px;
+  color: #8f8f8f;
+}
+
+input[type="checkbox"]{
+  margin: 10px 10px 0 0;
+  -webkit-appearance: none;
+  border: 1px solid #b5b6b7;
+  padding: 10px;
+  outline: 0;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked{
+  background: url("../img/icons/check-symbol.png") center no-repeat;
+  background-size: cover;
+  background-color: #00c3a3;
+  color: white;
+}
+
+a{
+  color: #00c3a3;
+}
+
+.btn-medium{
+  display: block;
+  background-color: #fbd43b;
+  color: white;
+  border: 0;
+  margin: auto;
+  padding: 16px;
+  font-size: 28px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.btn-medium:disabled{
+  background-color: #b9b9b9;
+}
+
+.message{
+  color: goldenrod;
+}
+
+/** Screen 3 **/
+span{
+  color: #49233b;
+}
+
+input[type=password], .input-form{
+  width: 91%;
+  padding-right: 7%;
+}
+
+.img-lock{
+  margin-left: 6%;
+  width: 7%;
+}
+
+.container-clock{
+  height: 20px;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+
+.container-clock img{
+  height: 100%;
+  margin: 0 4px;
+}
+
+/** Screen 4 **/
+.name{
+  text-transform: capitalize;
+}
+
+.email{
+  text-transform: lowercase;
+}
+
+/** Screen 5 **/
+.bg-yellow{
+  background-color: #fbd43b;
+}
+
+.bg-yellow img{
+  width: 50%;
+}
+
+.text-purple{
+  color: #49233b;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+  margin-bottom: 0;
+}
+
+/** Screen 6**/
+.input-date{
+  margin-left: 10px;
+  width: 20%;
+  color: #49233b;
+  border-bottom: 1px solid grey;
+  padding: 6px 10px;
+}
+
+.m-top-20{
+  padding-top: 20px;
+}
+
+.container-card{
+  margin-top: 20px;
+  padding: 8px;
+  height: 30px;
+}
+.container-card img{
+  height: 100%;
+}
+
+.text-green{
+  color: rgb(0, 195, 163);
+}
+
+.m-top{
+  margin-top: 30%;
+}
+
+/** Screen 8 **/
+.bg-purple-light{
+   background-color: #451e36;
+}
+
+.bg-purple-dark{
+  background-color:  #38052a;
+}
+
+.top{
+  width: 100%;
+  height: 40%;
+}
+
+.middle{
+  width: 100%;
+  height: 8%;
+  border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom{
+  height: 52%;
+  color: gainsboro;
+  margin: auto;
+}
+
+.text-white{
+  font-size: 18px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.align-left{
+  margin-left: 20px;
+  text-align: left;
+}
+
+.img-happy{
+  margin-top: 14%;
+  height: 40%;
+}
+
+.icon-engine{
+  display: block;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  height: 4%;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.rigth-arrow{
+  margin: 20px;
+}
+
+.div-info, .button-img{
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  height: 42%;
+  margin: auto;
+  margin-top: 7%;
+ }
+
+.div-info img{
+  height: 100%;
+}
+
+.button-img img{
+  height: 50%;
+}
