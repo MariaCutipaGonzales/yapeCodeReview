@@ -17,6 +17,7 @@ const render = (root) => {
             wrapper.addClass("bg-yellow");
             break;
 
+
     case 6: wrapper.append(Screen6(_=> render(root))); break;
 
     case 7: wrapper.append(Screen7(_=> render(root))); break;
