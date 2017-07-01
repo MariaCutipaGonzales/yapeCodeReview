@@ -233,6 +233,7 @@ input[type=password], .input-form{
 }
 
 .bottom{
+  width: 100%;
   height: 52%;
   color: gainsboro;
   margin: auto;

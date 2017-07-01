@@ -29,18 +29,14 @@ const Screen6 = (update)=>{
   container.append(message3);
   container.append(btnContinuar);
 
-  /** validando los inputs que sean números **/
-  validate(inputCard, message1);
-  validate(inputMonth, message2);
-  validate(inputYear, message3);
-
   /** validando Credit card **/
-  inputCard.keyup( function () {
-    if(inputCard.val().length == 16){
+  inputCard.on('keydown', function (e){
+    if( e.keyCode >= 48 && e.keyCode <= 57 ||  e.keyCode === 8){
       message1.text('');
     }
-    else{
-      message1.text('La tarjeta debe tener 16 números');
+    else {
+      message1.text('Sólo números');
+      return false;
     }
   });
 

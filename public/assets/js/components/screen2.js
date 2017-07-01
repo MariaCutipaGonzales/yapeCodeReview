@@ -6,6 +6,7 @@ const Screen2 = (update)=>{
   const contentInput = $('<div class="content-input"><img src="assets/img/icons/phoneandnumber.png" alt="number phone" class="img-input"></div>');
   const inputPhone = $('<input type="text" maxlength="9" class="input-phone">');
   const contentCheckbox = $('<div class="content-checkbox"></div>');
+  const form = $('<form></form>');
   const inputCheck = $('<input type="checkbox">Acepto los <a href="#">Términos y condiciones</a>');
   const message = $('<p class="message"></p>');
   const message2 = $('<p class="message"></p>');
@@ -13,60 +14,40 @@ const Screen2 = (update)=>{
   const btnContinuar = $('<button class="btn-medium" disabled>Continuar</button>');
 
   container.append(title);
-  container.append(contentInput);
+  form.append(contentInput);
   contentInput.append(inputPhone);
   contentCheckbox.append(inputCheck);
-  container.append(contentCheckbox);
+  form.append(contentCheckbox);
+  container.append(form);
   container.append(message);
   container.append(message2);
   container.append(message3);
   container.append(btnContinuar);
 
-  inputCheck.on( 'change keypress', function() {
-    if( $(this).is(':checked') && inputPhone.val().length == 9 ) {
-      btnContinuar.removeAttr("disabled");
-    } else {
-      btnContinuar.attr("disabled", "false");
+  inputPhone.on('keydown', function (e){
+    if( e.keyCode >= 48 && e.keyCode <= 57 ||  e.keyCode === 8){
+      message2.text('');
+    }
+    else {
+      message2.text('Sólo números');
+      return false;
     }
   });
 
-  inputPhone.on({
-    keyup: function () {
-      if(inputPhone.val().charAt(0) == 9){
-        message3.text('');
-      }
-      else{
-        message3.text('El número debe empezar con 9');
-      }
-      if(inputPhone.val().length == 9 &&  $(inputCheck).is(':checked') ){
-        btnContinuar.removeAttr("disabled");
-      }
-      else{
-        btnContinuar.attr("disabled", "false");
-      }
-      if(inputPhone.val().length == 9){;
-        message.text('');
-      }
-      else{
-        message.text('Debe tener 9 números');
-      }
-    },
-    keydown: function (e) {
-      if( e.keyCode >= 48 && e.keyCode <= 57 ||  e.keyCode === 8){
-        message2.text('');      }
-      else{message2.text('Sólo números'); return false;
-      }
+  /** validando formulario **/
+  form.on("change keyup", function () {
+    if(inputPhone.val().trim().length == 9 && inputPhone.val().charAt(0) == 9 && inputCheck.is(':checked')){
+      btnContinuar.removeAttr("disabled");
+    }
+    else {
+      btnContinuar.attr("disabled", "disabled");
     }
   });
+
 
   btnContinuar.click(function () {
-    if(inputPhone.val().length == 9 && inputPhone.val().charAt(0) == 9){
-      checkUser(inputPhone.val(), true, message, update);
-      message.text('');
-    }
-    else{
-      message.text('Número no válido: Son 9 números');
-    }
+    checkUser(inputPhone.val(), true, message, update);
+    message.text('');
   });
 
   return container;
